@@ -1,5 +1,44 @@
-@import 'bla';
+@import "../scss/vendors/_extends";
+@import "../scss/vendors/_variables";
 
-body {
-  padding: 100px;
-}
+@font-face {
+  font-family: OpenSansRegular ;
+  src: url("../scss/fonts/OpenSans-Regular.ttf");
+};
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+};
+
+.container {
+  overflow: hidden;
+  margin: 0 auto;
+  max-width: 1100px;
+  min-width: 320px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+};
+
+.wrapper {
+  $headerColor;
+};
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: $navBackColor;
+  }&__item {
+   display: block;
+   @extend %navItems;
+   text-align: center;
+ };
+
+
+
+
+
+
