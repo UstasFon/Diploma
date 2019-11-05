@@ -1,0 +1,29 @@
+{
+  "name": "diploma",
+  "version": "0.0.1",
+  "description": "bla",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --mode development --hot",
+    "build": "webpack --mode production"
+  },
+  "keywords": [
+    "diploma"
+  ],
+  "author": "Iliya Kukharchyk",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^3.2.0",
+    "html-loader": "^0.5.5",
+    "sass-loader": "^8.0.0",
+    "scss-loader": "0.0.1",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "dependencies": {
+    "node-sass": "^4.13.0"
+  }
+}
