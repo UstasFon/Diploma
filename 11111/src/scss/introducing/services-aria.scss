@@ -1,0 +1,68 @@
+@import "../vendors/_extends";
+@import "../vendors/_variables";
+
+.services {
+
+  &-aria {
+    max-width: 50%;
+
+    &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    width: 50%;
+    padding: 0 50px 55px 0;
+  }
+
+  &-item {
+
+    &__title {
+      font-size: 24px;
+      @extend %titleFont;
+      color: $mainTextColor;
+
+      &_settings:before {
+        margin-bottom: 33px;
+        display: block;
+        content: "";
+        width: 40px;
+        height: 40px;
+        background: url(../icons/Settings.svg) bottom center;
+        background-size: 100%;
+      }
+
+      &_pencil:before {
+        margin-bottom: 33px;
+        display: block;
+        content: "";
+        width: 40px;
+        height: 40px;
+        background: url(../icons/Pencil.svg) bottom  no-repeat;
+        background-size: 100%;
+      }
+
+      &_diamond:before {
+        margin-bottom: 33px;
+        display: block;
+        content: "";
+        width: 40px;
+        height: 40px;
+        background: url(../icons/Diamond.svg) bottom  no-repeat;
+        background-size: 100%;
+      }
+
+      &_truck:before {
+        margin-bottom: 33px;
+        display: block;
+        content: "";
+        width: 40px;
+        height: 40px;
+        background: url(../icons/Truck.svg) bottom  no-repeat;
+        background-size: 100%;
+      }
+    }
+  }
+}

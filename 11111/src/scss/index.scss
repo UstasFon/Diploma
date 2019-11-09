@@ -1,10 +1,10 @@
-@import "../scss/vendors/_extends";
-@import "../scss/vendors/_variables";
-
-@font-face {
-  font-family: OpenSansRegular ;
-  src: url("../scss/fonts/OpenSans-Regular.ttf");
-};
+@import "./vendors/_extends";
+@import "./vendors/_variables";
+@import "./header/nav";
+@import "./header/intro";
+@import "./introducing/funtion-aria";
+@import "./introducing/services-aria";
+@import "./products/products";
 
 * {
   box-sizing: border-box;
@@ -13,9 +13,8 @@
 };
 
 .container {
-  overflow: hidden;
   margin: 0 auto;
-  max-width: 1100px;
+  max-width: 1250px;
   min-width: 320px;
   padding-right: 10px;
   padding-left: 10px;
@@ -23,19 +22,18 @@
 };
 
 .wrapper {
-  $headerColor;
+  background-color: $headerColor;
 };
 
-.nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  background-color: $navBackColor;
-  }&__item {
-   display: block;
-   @extend %navItems;
-   text-align: center;
- };
+.text{
+  @extend %mainText;
+}
+
+.button {
+  @extend %mainButton;
+}
+
+
 
 
 

@@ -1,0 +1,25 @@
+@import "../vendors/_extends";
+@import "../vendors/_variables";
+
+.nav {
+  background-color: $navBackColor;
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  &__item {
+    display: inline-block;
+    @extend %navItems;
+    text-align: center;
+    color: #ffff;
+    padding: 30px;
+  }
+
+  &__item:hover {
+    background-color: $hoverNavColor;
+    transition: all 0.3s;
+  }
+};
