@@ -1,0 +1,70 @@
+@import "../vendors/extends";
+@import "../vendors/variables";
+@import "../fonts";
+
+
+.feedback-contact {
+  display: flex;
+  justify-content: space-between;
+
+  &__message {
+    max-width: 60%;
+  }
+}
+
+.form {
+  max-width: 50%;
+
+  &__data {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &:first-child {
+    margin-right: 60px;
+  }
+
+
+  &__input {
+    @extend %formInput;
+    width: 346px;
+    height: 69px;
+    border-radius: 7px;
+
+    &.text {
+      padding: 0;
+      font-size: 18px;
+      padding: 5px 5px 5px 54px;
+    }
+  }
+
+
+  &__letter {
+    @extend %formInput;
+    height: 249px;
+    width: 736px;
+    border-radius: 7px;
+    margin-top: 47px;
+
+    &.text {
+      font-size: 18px;
+      padding: 5px 5px 5px 54px;
+
+    }
+  }
+
+  &__button {
+    @extend %mainButton;
+    margin-top: 45px;
+    width: 749px;
+    height: 70px;
+    background-color: $mainRedColor;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $hoverNavColor;
+    }
+  }
+}
+
+

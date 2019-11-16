@@ -3,23 +3,26 @@
 $Gallery: #ECECEC;
 
 .introducing {
-  padding: 110px 0 0 0;
+  padding: 90px 0 0 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   border-bottom: 2px solid $Gallery;
 }
 
-.function-aria {
+.function-area {
   width: 50%;
-  padding: 0 95px 0 12px;
+  padding: 7px 95px 0 3px;
 
   &__promo {
     font-family: OpenSans-Bold, sans-serif;
     font-size: 42px;
+    line-height: 55px;
   }
 
   &__button {
+    width: 230px;
+    height: 58px;
     background-color: #fff;
     border-color: $mainRedColor;
     color: $mainRedColor;
@@ -33,6 +36,9 @@ $Gallery: #ECECEC;
   &__description {
     &.text {
       color: $black;
+      padding: 33px 0 49px 0;
+      line-height: 29px;
     }
   }
 };
+

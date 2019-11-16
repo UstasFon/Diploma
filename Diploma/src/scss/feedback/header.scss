@@ -1,0 +1,33 @@
+@import "../vendors/extends";
+@import "../vendors/variables";
+@import "../fonts";
+
+.feedback {
+  padding: 94px 0 110px 0;
+
+  &-contact__message {
+    padding-top: 75px;
+  }
+
+  &-header {
+    max-width: 50%;
+
+    &:after {
+      @extend %redLine;
+      margin: 0;
+    }
+
+    &__title {
+      @extend %titleFont;
+      font-size: 42px;
+    }
+
+    &__text {
+      &.text {
+        padding: 34px 0px 52px 4px;
+        line-height: 27px;
+      }
+    }
+  }
+}
+

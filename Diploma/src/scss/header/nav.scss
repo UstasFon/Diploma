@@ -4,10 +4,9 @@
 .nav {
   background-color: $navBackColor;
 
+
   &__list {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    @extend %navList;
   }
 
   &__item {
@@ -15,7 +14,8 @@
     @extend %navItems;
     text-align: center;
     color: #ffff;
-    padding: 30px;
+    padding: 32px;
+    letter-spacing: 0.5px;
   }
 
   &__item:hover {

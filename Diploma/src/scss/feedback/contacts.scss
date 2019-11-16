@@ -1,0 +1,40 @@
+@import "../vendors/extends";
+@import "../vendors/variables";
+@import "../fonts";
+
+.feedback-contact__info {
+  margin-top: 76px;
+  width: 408px;
+  padding: 141px 41px 142px 78px;
+  background-color: $mineShaft;
+}
+
+.info {
+  &__title {
+    font-family: OpenSans-Bold, sans-serif;
+    font-size: 18px;
+    color: $mercury;
+  }
+
+  &__address {
+    font-family: OpenSans-Regular, sans-serif;
+    font-size: 16px;
+    color: $mercury;
+    padding: 28px 0 18px 0;
+    line-height: 28px;
+  }
+
+  &__mail {
+    font-size: 16px;
+    font-family: OpenSans-Regular, sans-serif;
+    color: $mercury;
+    padding-bottom: 25px;
+  }
+
+  &__number {
+    font-size: 16px;
+    font-family: OpenSans-Regular, sans-serif;
+    color: $mercury;
+    padding-left: 3px;
+  }
+}

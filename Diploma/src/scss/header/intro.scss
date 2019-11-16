@@ -1,25 +1,41 @@
 @import "../vendors/_extends";
 @import "../vendors/_variables";
 
-$buttonHover: #fc5252;
+
 
 .intro {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 100px 0 125px 0;
+  padding: 90px 0 107px 0;
 }
 
 .promo {
   max-width: 50%;
   &__title {
-    @extend %titleFont;
+    font-family: OpenSans-ExtraBold, sans-serif;
     color: $black;
     font-size: 60px;
+    padding-top: 5px;
+    line-height: 74px;
+    letter-spacing: 1px;
+
+    &_word {
+      letter-spacing: 10px;
+    }
+  }
+
+  &__description {
+    &.text {
+      padding: 19px 0 49px 0;
+      line-height: 30px;
+    }
   }
 
   &__button {
     @extend %mainButton;
+    width: 230px;
+    height: 58px;
     background-color: $mainRedColor;
     color: #f6f2f2;
   }
@@ -37,6 +53,7 @@ $buttonHover: #fc5252;
     align-items: center;
     width: 550px;
     height: 350px;
+    margin: 24px 0 0 104px;
     background-color: #c4c0b1;
     box-shadow: -11px -3px 36px 10px #cbc7c7;
   }

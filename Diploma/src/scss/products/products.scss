@@ -1,0 +1,92 @@
+@import "../vendors/extends";
+@import "../vendors/variables";
+
+.product {
+  display: flex;
+  align-items: center;
+  padding: 156px 0 112px 0;
+
+  &-title {
+
+    &:after {
+      @extend %redLine;
+      margin: 0 auto;
+    }
+
+    &__title {
+      @extend %titleFont;
+      font-size: 42px;
+      text-align: center;
+      word-spacing: 5px;
+    }
+
+    &__text {
+      &.text {
+        text-align: center;
+        padding: 16px 0px 25px 36px;
+        line-height: 28px;
+      }
+    }
+  }
+
+  &__menu {
+    padding: 81px 0 55px 0;
+  }
+
+  &-menu {
+
+    &__list {
+      @extend %navList;
+    }
+
+    &__item {
+      text-align: center;
+      font-size: 22px;
+      font-family: OpenSans-Semibold, sans-serif;
+      color: $mainTextColor;
+      list-style-type: none;
+      padding: 0 25px 0 26px;
+
+      &:hover {
+        cursor: pointer;
+        color: $mainRedColor;
+      }
+    }
+  }
+
+  &__images {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-images {
+
+    &__first-line {
+      display: flex;
+      justify-content: stretch;
+      padding-bottom: 20px;
+    }
+
+      &__second-line {
+      display: flex;
+      justify-content: stretch;
+    }
+
+    &__item {
+      box-sizing: border-box;
+      width: 298px;
+      height: 293px;
+      background-color: $QuarterSpanishWhite;
+      margin-left: 20px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+
+
+
+
+}
