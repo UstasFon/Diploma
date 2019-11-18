@@ -7,7 +7,6 @@
     padding-bottom: 110px;
   }
 
-
   &__header {
     max-width: 460px;
 
@@ -71,6 +70,10 @@
 
     &__all {
       padding-left: 75px;
+
+      @media (max-width: 1205px) {
+       padding: 0;
+      }
     }
 
     &__tape {
@@ -79,6 +82,11 @@
 
       @media (max-width: 1205px) {
         justify-content: center;
+      }
+
+      @media (max-width: 768px) {
+        justify-content: center;
+        flex-wrap: wrap;
       }
     }
 
@@ -92,6 +100,10 @@
 
       &:hover .team-photo__item_note {
         display: block;
+      }
+
+      @media (max-width: 768px) {
+        margin: 20px;
       }
 
 
@@ -113,6 +125,10 @@
 
       &:last-child {
         margin-right: 0;
+
+        @media (max-width: 768px) {
+          margin: 20px;
+        }
       }
     }
   }

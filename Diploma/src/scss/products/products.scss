@@ -36,7 +36,12 @@
   &-menu {
 
     &__list {
-      @extend %navList;
+      display: flex;
+      justify-content: center;
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+        }
     }
 
     &__item {
@@ -46,6 +51,18 @@
       color: $mainTextColor;
       list-style-type: none;
       padding: 0 25px 0 26px;
+
+      @media (max-width: 768px) {
+        &:first-child {
+          padding: 0px;
+        }
+
+        @media (max-width: 576px) {
+          &:first-child {
+            padding: 0;
+          }
+        }
+      }
 
       &:hover {
         cursor: pointer;
@@ -65,11 +82,27 @@
       display: flex;
       justify-content: stretch;
       padding-bottom: 20px;
+
+
+      @media (max-width: 992px) {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      @media (max-width: 576px) {
+        justify-content: center;
+      }
+
     }
 
       &__second-line {
       display: flex;
       justify-content: stretch;
+
+        @media (max-width: 992px) {
+          justify-content: center;
+          flex-wrap: wrap;
+        }
     }
 
     &__item {
@@ -79,14 +112,17 @@
       background-color: $QuarterSpanishWhite;
       margin-left: 20px;
 
+      @media (max-width: 992px) {
+        margin: 20px;
+      }
+
       &:first-child {
         margin-left: 0;
+
+        @media (max-width: 992px) {
+          margin: 20px;
+        }
       }
     }
   }
-
-
-
-
-
 }

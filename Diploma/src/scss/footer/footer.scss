@@ -18,7 +18,7 @@
     padding-left: 3px;
   }
 
-  &__sicial {
+  &__social {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -30,6 +30,30 @@
         width: 34px;
         height: 34px;
         background: url("../icons/twitter.png") bottom no-repeat;
+        margin-right: 20px;
+    }
+
+    &_instagram {
+      display: block;
+      width: 34px;
+      height: 34px;
+      background: url("../icons/instagram.png") bottom no-repeat;
+      margin-right: 20px;
+    }
+
+    &_google {
+      display: block;
+      width: 34px;
+      height: 34px;
+      background: url("../icons/google.png") bottom no-repeat;
+      margin-right: 20px;
+    }
+
+    &_facebook {
+      display: block;
+      width: 34px;
+      height: 34px;
+      background: url("../icons/facebook.png") bottom no-repeat
     }
   }
 }
