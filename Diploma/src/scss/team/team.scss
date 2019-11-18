@@ -91,6 +91,8 @@
     }
 
     &__item {
+      overflow: hidden;
+      position: relative;
       width: 200px;
       height: 210px;
       background-color: $QuarterSpanishWhite;
@@ -99,7 +101,8 @@
       align-items: flex-end;
 
       &:hover .team-photo__item_note {
-        display: block;
+        bottom: 0px;
+        transition: bottom 500ms;
       }
 
       @media (max-width: 768px) {
@@ -111,7 +114,8 @@
         width: 200px;
         height: 40px;
         background-color: $Tapa;
-        display: none;
+        position: absolute;
+        bottom: -40px;
       }
 
       &_name {
