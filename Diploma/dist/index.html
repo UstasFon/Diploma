@@ -26,10 +26,11 @@
                         <p class="promo__description text">Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt  ut labore et. ectetur adig ipis cing elit, sed do eiusmod tempor incididunt.</p>
                         <button class="promo__button button">Contact Us</button>
                     </div>
-                    <div class="video">
-                        <div class="video__bar">
-                            <i class="video-bar__icon"></i>
-                        </div>
+                    <div class="video video__bar">
+                        <video
+                            id="videoPlayer"
+                            <source src=https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4 type=video/mp4>
+                        </video>
                     </div>
                 </div>
             </div>
@@ -161,8 +162,10 @@
                                 <input type="text" class="form__input text" placeholder="Name">
                                 <input type="text" class="form__input text" placeholder="Your Mail">
                             </div>
-                                <input type="text" class="form__letter text" placeholder="Type your message">
-                            <button class="form__button">SEND MESSAGE</button>
+                            <div class="form__wrapper">
+                                <textarea class="form__letter text"  placeholder="Type your message"></textarea>
+                                <button class="form__button">SEND MESSAGE</button>
+                            </div>
                         </form>
                     </div>
                     <div class="feedback-contact__info">
@@ -191,8 +194,6 @@
 </body>
 
 <script src="js/bundle.js"></script>
-<body>
 
-</body>
 
 </html>

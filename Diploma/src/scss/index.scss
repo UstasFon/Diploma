@@ -5,12 +5,13 @@
 @import "./introducing/funtion-area";
 @import "./introducing/services-area";
 @import "./products/products";
-@import "products/team";
+@import "./team/team";
 @import "delivered/dilivered";
 @import "feedback/header";
 @import "feedback/form";
 @import "feedback/contacts";
 @import "footer/footer";
+@import "../../node_modules/plyr/src/sass/plyr";
 
 * {
   box-sizing: border-box;

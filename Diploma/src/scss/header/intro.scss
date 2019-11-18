@@ -8,10 +8,24 @@
   flex-direction: row;
   justify-content: space-between;
   padding: 90px 0 107px 0;
+  
+  @media (max-width: 1205px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .promo {
   max-width: 50%;
+  
+  @media (max-width: 1205px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100%;
+    padding-bottom: 50px;
+  }
   &__title {
     font-family: OpenSans-ExtraBold, sans-serif;
     color: $black;
@@ -19,6 +33,10 @@
     padding-top: 5px;
     line-height: 74px;
     letter-spacing: 1px;
+
+    @media (max-width: 1205px) {
+      text-align: center;
+    }
 
     &_word {
       letter-spacing: 10px;
@@ -29,6 +47,10 @@
     &.text {
       padding: 19px 0 49px 0;
       line-height: 30px;
+
+      @media (max-width: 1205px) {
+        text-align: center;
+      }
     }
   }
 
@@ -38,6 +60,10 @@
     height: 58px;
     background-color: $mainRedColor;
     color: #f6f2f2;
+
+    @media (max-width: 1205px) {
+      margin: 0 auto;
+    }
   }
 
   &__button:hover {
@@ -50,19 +76,22 @@
   &__bar {
     display: flex;
     justify-content: center;
-    align-items: center;
     width: 550px;
     height: 350px;
     margin: 24px 0 0 104px;
     background-color: #c4c0b1;
-    box-shadow: -11px -3px 36px 10px #cbc7c7;
+    box-shadow: -20px -14px 70px 10px #cbc7c7;
+
+    @media (max-width: 1205px) {
+      margin: 0 auto;
+    }
   }
 
   &-bar__icon {
     display: block;
     width: 70px;
     height: 70px;
-    background: url(../icons/VedioIcon.svg) bottom no-repeat;
+    background: url(../icons/VedioIcon.png) bottom no-repeat;
     background-size: 100%;
 
     //&:hover {

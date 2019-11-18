@@ -11,9 +11,17 @@
   &__header {
     max-width: 460px;
 
+    @media (max-width: 1205px) {
+      max-width: 100%;
+    }
+
     &:after {
       @extend %redLine;
       margin: 0;
+
+      @media (max-width: 1205px) {
+        margin: 0 auto;
+      }
     }
   }
 
@@ -23,12 +31,19 @@
       @extend %titleFont;
       font-size: 42px;
 
+      @media (max-width: 1205px) {
+        text-align: center;
+      }
     }
 
     &__text {
       &.text {
         padding: 21px 0 30px 4px;
         line-height: 28px;
+
+        @media (max-width: 1205px) {
+          text-align: center;
+        }
       }
     }
   }
@@ -37,10 +52,18 @@
     display: flex;
     padding-top: 70px;
 
+    @media (max-width: 1205px) {
+      flex-direction: column;
+    }
+
     &_big {
       min-width: 322px;
       height: 460px;
       background-color: $QuarterSpanishWhite;
+
+      @media (max-width: 1205px) {
+        margin: 0 auto;
+      }
     }
   }
 
@@ -53,13 +76,17 @@
     &__tape {
       display: flex;
       padding-top: 65px;
+
+      @media (max-width: 1205px) {
+        justify-content: center;
+      }
     }
 
     &__item {
       width: 200px;
       height: 210px;
       background-color: $QuarterSpanishWhite;
-      margin-right: 20px;
+      margin-right: 17px;
       display: flex;
       align-items: flex-end;
 
@@ -97,12 +124,22 @@
     font-family: OpenSans-Semibold, sans-serif;
     font-size: 30px;
     padding-top: 5px;
+
+    @media (max-width: 1205px) {
+      padding-top: 50px;
+      text-align: center;
+     letter-spacing: 5px;
+    }
   }
 
   &__text {
     &.text {
       padding: 20px 0 34px 0;
       line-height: 28px;
+
+      @media (max-width: 1205px) {
+        text-align: center;
+      }
     }
   }
 
@@ -115,6 +152,13 @@
 
     &:last-child {
       padding-right: 0;
+    }
+  }
+
+  &__social {
+    @media (max-width: 1205px) {
+      display: flex;
+      justify-content: center;
     }
   }
 }

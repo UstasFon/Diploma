@@ -7,17 +7,50 @@
   display: flex;
   justify-content: space-between;
 
+  @media (max-width: 1205px) {
+    flex-direction: column;
+    justify-content: center;
+  }
+
   &__message {
     max-width: 60%;
+
+    @media (max-width: 1205px) {
+      margin: 0 auto;
+      max-width: 100%;
+    }
+  }
+
+  &__info {
+    margin-top: 76px;
+    width: 408px;
+    padding: 141px 41px 142px 78px;
+    background-color: $mineShaft;
+
+    @media (max-width: 1205px) {
+      width: 100%;
+    }
   }
 }
 
 .form {
   max-width: 50%;
 
+  &__wrapper {
+    @media (max-width: 1205px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
   &__data {
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 1205px) {
+      justify-content: center;
+    }
   }
 
   &:first-child {
@@ -27,12 +60,16 @@
 
   &__input {
     @extend %formInput;
-    width: 346px;
+    width: 338px;
     height: 69px;
     border-radius: 7px;
+    margin-right: 57px;
+
+    &:last-child {
+      margin-right: 0;
+    }
 
     &.text {
-      padding: 0;
       font-size: 18px;
       padding: 5px 5px 5px 54px;
     }
@@ -45,10 +82,11 @@
     width: 736px;
     border-radius: 7px;
     margin-top: 47px;
+    resize: none;
 
     &.text {
       font-size: 18px;
-      padding: 5px 5px 5px 54px;
+      padding: 90px 5px 5px 54px;
 
     }
   }
@@ -65,6 +103,11 @@
       background-color: $hoverNavColor;
     }
   }
+}
+
+.message__form {
+  max-width: 100%;
+
 }
 
 
