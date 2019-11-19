@@ -31,6 +31,10 @@
       width: 100%;
       padding: 50px 41px 50px 78px;
     }
+
+    @media (max-width: 992px) {
+      padding: 50px 40px 50px 40px;
+    }
   }
 }
 
@@ -81,15 +85,20 @@
 
     @media (max-width: 576px) {
       margin-bottom: 50px;
+      text-align: center;
     }
 
     &:last-child {
-      margin-right: 0;
+      margin: 0;
     }
 
     &.text {
       font-size: 18px;
       padding: 5px 5px 5px 54px;
+
+      @media (max-width: 576px) {
+        padding: 5px 5px 5px 5px;
+      }
     }
   }
 
@@ -125,7 +134,7 @@
     background-color: $mainRedColor;
 
     @media (max-width: 576px) {
-      width: 527px;
+      width: 100%;
     }
 
     &:hover {

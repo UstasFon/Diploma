@@ -31,7 +31,12 @@ $bianca: #fdfcf8;
   &__mail{
     display: flex;
     justify-content: center;
-    padding: 0px 0px 5px 12px;
+    padding: 0 0 5px 12px;
+
+    @media (max-width: 375px) {
+      flex-direction: column;
+      padding: 0;
+    }
   }
 
   &-mail {
@@ -39,7 +44,12 @@ $bianca: #fdfcf8;
     &__line {
       &.text {
         padding: 5px 5px 5px 31px;
+
+        @media (max-width: 375px) {
+          padding: 5px 5px 5px 5px;
+        }
       }
+
       border-radius: 7px;
       height: 78px;
       width: 519px;
@@ -47,6 +57,11 @@ $bianca: #fdfcf8;
       outline: none;
       background-color: $bianca;
 
+      @media (max-width: 375px) {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 20px;
+      }
     }
 
     &__button {
@@ -58,6 +73,11 @@ $bianca: #fdfcf8;
       font-family: OpenSans-Bold, sans-serif;
       font-size: 18px;
       color: $bianca;
+
+      @media (max-width: 375px) {
+        margin: 0 auto;
+        font-size: 15px;
+      }
 
       &:hover {
         background-color: $buttonHover;

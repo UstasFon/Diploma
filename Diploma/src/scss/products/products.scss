@@ -6,6 +6,10 @@
   align-items: center;
   padding: 156px 0 112px 0;
 
+  @media (max-width: 575px) {
+    padding: 60px 0 60px 0;
+  }
+
   &-title {
 
     &:after {

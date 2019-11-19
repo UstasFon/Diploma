@@ -14,6 +14,10 @@
     flex-direction: column;
     justify-content: center;
   }
+
+  @media (max-width: 576px) {
+    padding: 30px 0 30px 0;
+  }
 }
 
 .promo {
@@ -37,9 +41,18 @@
     @media (max-width: 1205px) {
       text-align: center;
     }
+    
+    @media (max-width: 375px) {
+      font-size: 40px;
+    }
 
     &_word {
       letter-spacing: 10px;
+
+      @media (max-width: 375px) {
+        font-size: 40px;
+        letter-spacing: 1px;
+      }
     }
   }
 
@@ -84,6 +97,16 @@
 
     @media (max-width: 1205px) {
       margin: 0 auto;
+      width: 550px;
+      height: 350px;
+    }
+
+
+
+    @media (max-width: 375px) {
+      margin: 0 auto;
+      width: 325px;
+      height: 250px
     }
   }
 

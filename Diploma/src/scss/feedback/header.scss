@@ -5,6 +5,11 @@
 .feedback {
   padding: 94px 0 110px 0;
 
+  @media (max-width: 576px) {
+    width: 100%;
+    padding: 50px 5px 20px 5px;
+  }
+
   &-contact__message {
     padding-top: 75px;
   }
