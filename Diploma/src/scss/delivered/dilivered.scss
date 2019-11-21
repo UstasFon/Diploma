@@ -86,3 +86,8 @@ $bianca: #fdfcf8;
     }
   }
 }
+
+.wrong-validation {
+  transition: 500ms;
+  box-shadow: inset -20px -14px 70px 10px $mainRedColor;
+}

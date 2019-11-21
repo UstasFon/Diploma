@@ -9,10 +9,20 @@ module.exports = {
     historyApiFallback: true,
     port: 9000
   },
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'source-map',
   entry: './src/index.js',
   module: {
     rules: [
+      {
+        test: /\.m?js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
+      },
       {
         test: /\.(png|jpeg|gif|ttf|svg)$/i,
         use: [
