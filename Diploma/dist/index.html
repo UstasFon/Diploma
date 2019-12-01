@@ -70,68 +70,31 @@
             </div>
             <div class="product__menu">
                 <ul class="product-menu__list">
-                    <li class="product-menu__item">ALL</li>
-                    <li class="product-menu__item">PRINT TEMPLATE</li>
-                    <li class="product-menu__item">WEB TEMPLATE</li>
-                    <li class="product-menu__item">USER INTERFACE</li>
-                    <li class="product-menu__item">MOCK-UP</li>
+                    <li class="product-menu__item" tag="all">ALL</li>
+                    <li class="product-menu__item" tag="print">PRINT TEMPLATE</li>
+                    <li class="product-menu__item" tag="web">WEB TEMPLATE</li>
+                    <li class="product-menu__item" tag="user">USER INTERFACE</li>
+                    <li class="product-menu__item" tag="mockUp">MOCK-UP</li>
                 </ul>
             </div>
-            <div class="product__images">
-                <div class="product-images__first-line">
-                    <div class="product-images__item"></div>
-                    <div class="product-images__item"></div>
-                    <div class="product-images__item"></div>
-                    <div class="product-images__item"></div>
-                </div>
-                <div class="product-images__second-line">
-                    <div class="product-images__item"></div>
-                    <div class="product-images__item"></div>
-                    <div class="product-images__item"></div>
-                    <div class="product-images__item"></div>
-                </div>
-            </div>
+            <div class="product__images"></div>
         </div>
     </section>
     <section class="container team">
         <div class="team__header">
             <p class="team-header__title">MEET OUR TEAM</p>
-            <p class="team-header__text text">Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed dooing eiusmod tempor<br/> incididut labore Ui / Ux , print template.</p>
+            <p class="team-header__text text">
+                Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed dooing eiusmod tempor<br/> incididut labore Ui / Ux , print template.
+            </p>
         </div>
         <div class="team__photo">
             <div class="team__photo_big"></div>
             <div class="team-photo__all">
                 <div class="team-photo__personal-information">
-                    <p class="personal-information__name">MARK WAUGH</p>
-                    <p class="personal-information__text text">Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed dooing eiusmod tempor incididut labore Ui / Ux , print template.</p>
-                    <div class="personal-information__social">
-                        <a href="https://www.facebook.com/" class="personal-information__network" target="_blank">Facebook</a>
-                        <a href="https://dribbble.com/" class="personal-information__network" target="_blank">Dribble</a>
-                        <a href="https://www.behance.net/" class="personal-information__network" target="_blank">Behance</a>
-                        <a href="https://twitter.com/" class="personal-information__network" target="_blank">Twitter</a>
-                    </div>
-                    <div class="team-photo__tape">
-                        <div class="team-photo__item">
-                            <div class="team-photo__item_note">
-                                <p class="team-photo__item_name">SOKINA JUE</p>
-                            </div>
-                        </div>
-                        <div class="team-photo__item">
-                            <div class="team-photo__item_note">
-                                <p class="team-photo__item_name">SOKINA JUE</p>
-                            </div>
-                        </div>
-                        <div class="team-photo__item">
-                            <div class="team-photo__item_note">
-                                <p class="team-photo__item_name">SOKINA JUE</p>
-                            </div>
-                        </div>
-                        <div class="team-photo__item">
-                            <div class="team-photo__item_note">
-                                <p class="team-photo__item_name">SOKINA JUE</p>
-                            </div>
-                        </div>
-                    </div>
+                    <p class="personal-information__name"></p>
+                    <p class="personal-information__text text"></p>
+                    <div class="personal-information__social_wrapper"></div>
+                    <div class="team-photo__tape"></div>
                 </div>
             </div>
         </div>
@@ -141,10 +104,13 @@
             <div class="delivered">
                 <p class="delivered__title">Design tips, tricks, and freebies. Delivered weekly.</p>
                 <p class="delivered__text text">Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod.</p>
-                <form action="" class="delivered__mail">
-                    <input type="text" class="delivered-mail__line text" placeholder="Email Address">
-                    <button class="delivered-mail__button">SUBSCRIBE</button>
-                </form>
+                    <form action="" class="delivered__mail">
+                        <div class="delivered-mail__wrapper">
+                            <input type="text" class="delivered-mail__email text" placeholder="Email Address">
+                            <p class="delivered-mail__wrong-mail">Enter correct email, please!</p>
+                        </div>
+                        <button class="delivered-mail__button">SUBSCRIBE</button>
+                    </form>
             </div>
         </div>
     </section >

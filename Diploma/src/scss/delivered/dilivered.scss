@@ -28,12 +28,25 @@ $bianca: #fdfcf8;
     }
   }
 
-  &__mail{
+  &__mail {
     display: flex;
     justify-content: center;
     padding: 0 0 5px 12px;
 
+    &_invalid {
+      .delivered-mail__wrong-mail {
+        display: block;
+      }
+    }
+
+    @media (max-width: 768px) {
+      justify-content: center;
+      flex-direction: column;
+      padding: 0;
+    }
+
     @media (max-width: 375px) {
+      justify-content: center;
       flex-direction: column;
       padding: 0;
     }
@@ -41,7 +54,13 @@ $bianca: #fdfcf8;
 
   &-mail {
 
-    &__line {
+    &__wrapper {
+      @media (max-width: 768px) {
+        padding-bottom: 30px;
+      }
+    }
+
+    &__email {
       &.text {
         padding: 5px 5px 5px 31px;
 
@@ -56,6 +75,12 @@ $bianca: #fdfcf8;
       border: none;
       outline: none;
       background-color: $bianca;
+
+      @media (max-width: 768px) {
+        display: block;
+        padding: 0;
+        margin: 0 auto;
+      }
 
       @media (max-width: 375px) {
         text-align: center;
@@ -74,6 +99,10 @@ $bianca: #fdfcf8;
       font-size: 18px;
       color: $bianca;
 
+      @media (max-width: 768px) {
+        margin: 0 auto;
+      }
+
       @media (max-width: 375px) {
         margin: 0 auto;
         font-size: 15px;
@@ -84,10 +113,22 @@ $bianca: #fdfcf8;
         cursor: pointer;
       }
     }
+
+    &__wrong-mail {
+      display: none;
+      margin-top: 10px;
+      font-family: OpenSans-Regular, sans-serif;
+      font-size: 15px;
+      color: $mainRedColor;
+
+      @media (max-width: 768px) {
+        text-align: center;
+      }
+    }
   }
 }
 
 .wrong-validation {
+  border: 2px solid red;
   transition: 500ms;
-  box-shadow: inset -20px -14px 70px 10px $mainRedColor;
-}
+};

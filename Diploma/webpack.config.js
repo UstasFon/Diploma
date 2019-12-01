@@ -7,7 +7,10 @@ module.exports = {
     inline: true,
     contentBase: './dist',
     historyApiFallback: true,
-    port: 9000
+    port: 9000,
+    proxy: {
+      '/api': 'http://localhost:8080'
+    }
   },
   devtool: 'source-map',
   entry: './src/index.js',
@@ -44,6 +47,12 @@ module.exports = {
         use: {
           loader: 'html-loader'
         }
+      },
+      {
+        test: /\.(jpg|png)$/,
+        use: {
+          loader: 'url-loader',
+        },
       }
     ]
   },

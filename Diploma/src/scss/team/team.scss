@@ -64,6 +64,11 @@
         margin: 0 auto;
       }
     }
+
+    &_img {
+      width: inherit;
+      max-height: inherit;
+    }
   }
 
   &-photo {
@@ -80,7 +85,7 @@
       display: flex;
       padding-top: 65px;
 
-      @media (max-width: 1205px) {
+      @media (max-width: 1285px) {
         justify-content: center;
       }
 
@@ -99,6 +104,7 @@
       margin-right: 17px;
       display: flex;
       align-items: flex-end;
+      cursor: pointer;
 
       &:hover .team-photo__item_note {
         bottom: 0px;
