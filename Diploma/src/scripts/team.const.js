@@ -1,4 +1,4 @@
-import ceasar from '../images/ceasar.jpg';
+import ceasar from '../images/ceasar.jpg';  
 import pompeius from '../images/pompeius.jpg';
 import antonius from '../images/antonius.jpg';
 import vorenus from '../images/vorenus.jpg';

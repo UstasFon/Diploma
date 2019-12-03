@@ -42,6 +42,11 @@
   @extend %mainButton;
 }
 
+.wrong-validation {
+    border: 2px solid red;
+    transition: 500ms;
+};
+
 
 
 

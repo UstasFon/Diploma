@@ -141,6 +141,16 @@
       cursor: pointer;
       background-color: $hoverNavColor;
     }
+
+    &_disabled {
+      opacity: 50%;
+      color: $QuarterSpanishWhite;
+
+      &:hover {
+        opacity: 50%;
+        background-color: $mainRedColor;
+      }
+    }
   }
 }
 
