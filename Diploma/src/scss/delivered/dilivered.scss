@@ -116,14 +116,8 @@ $bianca: #fdfcf8;
 
     &__wrong-mail {
       display: none;
-      margin-top: 10px;
-      font-family: OpenSans-Regular, sans-serif;
-      font-size: 15px;
-      color: $mainRedColor;
+     @extend %wrongInputs;
 
-      @media (max-width: 768px) {
-        text-align: center;
-      }
     }
   }
 }

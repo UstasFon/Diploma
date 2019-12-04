@@ -26,6 +26,24 @@ import toastr from "toastr";
         }
     };
 
+    let fieldsWrappers = {
+        nameInput: {
+            wrapper: document.querySelector('.form__wrapper_name'),
+            hint: 'Please, enter You name'
+        },
+
+        mailInput: {
+            wrapper: document.querySelector('.form__wrapper_mail'),
+            hint: 'Please, check You mail'
+        },
+
+        messageInput: {
+            wrapper: document.querySelector('.form__wrapper_message'),
+            hint: 'Please enter You message'
+        }
+    };
+
+
     const formButton = document.querySelector('.form__button');
     let messageData = {};
     const userMessagedAPI = '/api/message';
@@ -38,11 +56,32 @@ import toastr from "toastr";
 };
 
     let removeWrongValidateMessage = (name) => {
-        console.log(name)
-        if (wrongValidFields[name].showError) {
+        if (!wrongValidFields[name].showError) {
             formFields[name].classList.remove('wrong-validation');
+            wrongValidFields[name].showError = false;
+            let alertMessage = document.querySelector('.form__wrapper_alert-' + [name]);
+            removeAlertMessage(alertMessage, name);
         }
+    };
 
+    let removeAlertMessage = (alertMessage, name) => {
+        if (alertMessage && !wrongValidFields[name].showError) {
+            alertMessage.parentNode.removeChild(alertMessage);
+        }
+    };
+
+    let wrongValidateMessage = (name) => {
+        let alertMessage = document.querySelector('.form__wrapper_alert-' + [name]);
+
+        if (wrongValidFields[name].showError && !alertMessage) {
+            formFields[name].classList.add('wrong-validation');
+            wrongValidFields[name].showError = false;
+
+            alertMessage = document.createElement('p');
+            alertMessage.innerText = fieldsWrappers[name].hint;
+            alertMessage.classList.add('form__wrapper_alert-' + [name]);
+            fieldsWrappers[name].wrapper.appendChild(alertMessage);
+        }
     };
 
     let validateMessageForm = (name) => {
@@ -52,12 +91,12 @@ import toastr from "toastr";
         const isFieldsValid = isNameValid && isMailValid && isMessageValid;
         
         if (wrongValidFields[name].isValid === false) {
-            wrongValidateMessage();
+            wrongValidFields[name].showError = true;
+            wrongValidateMessage(name);
         } else {
-            removeWrongValidateMessage();
+            wrongValidFields[name].showError = false;
+            removeWrongValidateMessage(name);
         }
-
-        removeWrongValidateMessage(name);
 
         if (isFieldsValid !== isFormComplete) {
             isFormComplete = isFieldsValid;
@@ -103,12 +142,6 @@ import toastr from "toastr";
             });
     };
 
-    let messageCleaningInputs = () => {
-        formFields.nameInput.value = "";
-        formFields.mailInput.value = "";
-        formFields.messageInput.value = "";
-    };
-
     let nameInputValidation = () => {
         let nameInputTrim = formFields.nameInput.value.trim();
         let nameValidate = true;
@@ -121,13 +154,6 @@ import toastr from "toastr";
         }
 
         return nameValidate;
-    };
-
-    let wrongValidateMessage = (name) => {
-        console.log(name);
-        if (wrongValidFields[name].showError) {
-            formFields[name].classList.add('wrong-validation');
-        }
     };
 
     let mailInputValidation = () => {
@@ -159,12 +185,18 @@ import toastr from "toastr";
         return messageValidate;
     };
 
+    let messageCleaningInputs = () => {
+        formFields.nameInput.value = "";
+        formFields.mailInput.value = "";
+        formFields.messageInput.value = "";
+    };
+
     formFields.nameInput.oninput = validateMessageForm.bind(this, 'nameInput');
-    formFields.nameInput.onblur = wrongValidateMessage.bind(this, 'nameInput');
+    formFields.nameInput.onblur = validateMessageForm.bind(this, 'nameInput');
     formFields.mailInput.oninput = validateMessageForm.bind(this, 'mailInput');
-    formFields.mailInput.onblur = wrongValidateMessage.bind(this, 'mailInput');
+    formFields.mailInput.onblur = validateMessageForm.bind(this, 'mailInput');
     formFields.messageInput.oninput = validateMessageForm.bind(this, 'messageInput');
-    formFields.messageInput.onblur = wrongValidateMessage.bind(this, 'messageInput');
+    formFields.messageInput.onblur = validateMessageForm.bind(this, 'messageInput');
     formButton.onclick = messageSubmit;
 
 }

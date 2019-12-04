@@ -125,11 +125,17 @@
                     <div class="feedback-contact__message">
                         <form action="" class="message__form">
                             <div class="form__data">
-                                <input type="text" class="form__input text" placeholder="Name" id="name">
-                                <input type="text" class="form__input text" placeholder="Your Mail" id="mail">
+                                <div class="form__wrapper_name">
+                                    <input type="text" class="form__input text" placeholder="Name" id="name">
+                                </div>
+                                <div class="form__wrapper_mail">
+                                    <input type="text" class="form__input text" placeholder="Your Mail" id="mail">
+                                </div>
                             </div>
                             <div class="form__wrapper">
-                                <textarea class="form__letter text"  placeholder="Type your message" id="message"></textarea>
+                                <div class="form__wrapper_message">
+                                    <textarea class="form__letter text"  placeholder="Type your message" id="message"></textarea>
+                                </div>
                                 <button class="form__button form__button_disabled" disabled>SEND MESSAGE</button>
                             </div>
                         </form>

@@ -2,7 +2,6 @@ import teamArray from './team.const';
 
 {
     const fullSize = document.querySelector('.team__photo_big');
-    let nameTitle = document.querySelectorAll('.team-photo__item_note');
     const teamPhotoTape = document.querySelector('.team-photo__tape');
     const teamData = document.querySelector('.team-photo__all');
     const personalName = document.querySelector('.personal-information__name');

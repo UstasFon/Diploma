@@ -42,10 +42,32 @@
   max-width: 50%;
 
   &__wrapper {
+
+    &_alert-nameInput {
+      @extend %wrongInputs;
+    }
+
+    &_alert-maileInputs {
+      @extend %wrongInputs;
+    }
+
+    &_alert-mailInput {
+      @extend %wrongInputs
+    }
+
     @media (max-width: 1205px) {
       display: flex;
       flex-direction: column;
       justify-content: center;
+
+    }
+
+    &_name {
+      margin-right: 57px;
+
+     @media (max-width: 1205px) {
+      margin: 0 0 20px 0;
+       }
     }
   }
 
@@ -53,8 +75,11 @@
     display: flex;
     justify-content: space-between;
 
+
+
     @media (max-width: 1205px) {
       justify-content: center;
+      flex-direction: column;
     }
 
     @media (max-width: 576px) {
@@ -77,9 +102,8 @@
     width: 338px;
     height: 69px;
     border-radius: 7px;
-    margin-right: 57px;
 
-    @media (max-width: 576px) {
+    @media (max-width: 1205px) {
       width: 100%;
     }
 
@@ -145,6 +169,10 @@
     &_disabled {
       opacity: 50%;
       color: $QuarterSpanishWhite;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
 
       &:hover {
         opacity: 50%;
