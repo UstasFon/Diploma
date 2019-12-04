@@ -47,11 +47,11 @@
       @extend %wrongInputs;
     }
 
-    &_alert-maileInputs {
+    &_alert-mailInput {
       @extend %wrongInputs;
     }
 
-    &_alert-mailInput {
+    &_alert-messageInput {
       @extend %wrongInputs
     }
 

@@ -29,17 +29,17 @@ import toastr from "toastr";
     let fieldsWrappers = {
         nameInput: {
             wrapper: document.querySelector('.form__wrapper_name'),
-            hint: 'Please, enter You name'
+            hint: 'Please, enter your name'
         },
 
         mailInput: {
             wrapper: document.querySelector('.form__wrapper_mail'),
-            hint: 'Please, check You mail'
+            hint: 'Please, check your email'
         },
 
         messageInput: {
             wrapper: document.querySelector('.form__wrapper_message'),
-            hint: 'Please enter You message'
+            hint: 'Please enter your message'
         }
     };
 
@@ -134,7 +134,7 @@ import toastr from "toastr";
                 }
             })
             .then((data) => {
-                toastr.success('You message send!');
+                toastr.success('Your message was sent!');
                 messageCleaningInputs();
             })
             .catch((data) => {

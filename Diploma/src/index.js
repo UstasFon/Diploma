@@ -7,6 +7,7 @@ import './scripts/delivered';
 import './scripts/product';
 import './scripts/team';
 import './scripts/message';
+import './scripts/burger';
 
 const player = new Plyr('#videoPlayer');
 
