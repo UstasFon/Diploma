@@ -5,33 +5,34 @@
 .burger {
   display: none;
   overflow: hidden;
-  position: absolute;
-  top: 50px;
-  right: 10px;
+  margin: 0 auto;
+  //position: absolute;
+  //top: 50px;
+  //right: 10px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   cursor: pointer;
 
   &.open {
-    .burger__line_one {
+    .burger__item_one {
       background-color: $mainRedColor;
       transform: rotate(45deg) translateY(21px) translateX(14px);
     }
 
-    .burger__line_two {
+    .burger__item_two {
       background-color: $mainRedColor;
       transform: rotate(495deg) translateX(9px);
     }
 
-    .burger__line_three {
+    .burger__item_three {
       background-color: $mainRedColor;
       transform: rotate(45deg);
       opacity: 0;
     }
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: 576px) {
     display: flex;
   }
 

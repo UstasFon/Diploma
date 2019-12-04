@@ -11,6 +11,10 @@ $bianca: #fdfcf8;
 .delivered {
   padding: 125px 0 123px 0;
 
+  @media (max-width: 768px) {
+    padding: 50px 0 50px 0;
+  }
+
   &__title {
     color: $bianca;
     font-size: 42px;
