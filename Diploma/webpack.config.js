@@ -7,12 +7,33 @@ module.exports = {
     inline: true,
     contentBase: './dist',
     historyApiFallback: true,
-    port: 9000
+    port: 9000,
+    proxy: {
+      '/api': 'http://localhost:8080'
+    }
   },
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'source-map',
   entry: './src/index.js',
   module: {
     rules: [
+      {
+        test: /\.m?js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
+      },
+      {
+        test: /\.(png|jpeg|gif|ttf|svg)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
       {
         test: /\.js$/,
         exclude: /node_modules/
@@ -26,6 +47,12 @@ module.exports = {
         use: {
           loader: 'html-loader'
         }
+      },
+      {
+        test: /\.(jpg)$/,
+        use: {
+          loader: 'url-loader',
+        },
       }
     ]
   },
